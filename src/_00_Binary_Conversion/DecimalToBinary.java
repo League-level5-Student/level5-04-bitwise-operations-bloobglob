@@ -57,16 +57,15 @@ public class DecimalToBinary {
 		*/
 		
 		System.out.println( convertDecimalToBinary( 43 ) );
+		System.out.println(0b101011);
 	}
 	
     public static String convertDecimalToBinary(int decimalNum) {
         String binaryStr = "";
     
         do {
-            // 1. Logical right shift by 1
-            int quotient = decimalNum >>> 1;
+            int quotient = decimalNum >> 1;
         
-            // 2. Check remainder and add '1' or '0'
             if( decimalNum % 2 != 0 ){
                 binaryStr = '1' + binaryStr;
             } else {
